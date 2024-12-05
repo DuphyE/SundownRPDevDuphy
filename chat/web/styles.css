@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css');
+@font-face{
+    font-family: "RDR Lino Regular";
+    src: url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.eot");
+    src: url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/ab21a97b9cae2e116d8d1473baefc9f0.svg#RDR Lino Regular")format("svg");
+    font-weight:normal;
+    font-style:normal;
+    font-display:swap;
+}
+
+* {
+    font-family: "RDR Lino Regular";
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+}
+
+#app {
+    font-family: "RDR Lino Regular";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: white;
+    background-color: transparent;
+}
+
+.chat-window {
+    position: absolute;
+    top: 1%;
+    left: 12px;
+    width: 38%;
+    height: 530px;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-animation-duration: 2s;
+}
+
+.chat-messages {
+    max-height: 85%;
+    font-size: 1.0rem;
+    overflow: hidden;
+    word-break: break-word;
+    box-sizing: border-box;
+    display: block;
+}
+
+.chat-input {
+    font-size: 1.65vh;
+    position: absolute;
+    top: 245px;
+    left: 12px;
+    width: 39%;
+    max-width: 23.8%;
+    box-sizing: border-box;
+}
+
+.prefix {
+    position: absolute;
+    margin-top: 4.2%;
+    margin-left: 2%;
+    left: 0.208%;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+input {
+    font-size: 1.1rem;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 1.6%;
+    padding-left: 8%;
+    padding-bottom: 1.4%;
+    padding-right: 5.6%;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    background-image: url('./text_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border: none;
+    height: 50px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    resize: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 1);
+}
+
+input:focus {
+    outline: none;
+}
+
+.msg {
+    font-family: "RDR Lino Regular";
+    font-weight: normal;
+    vertical-align: baseline;
+    padding-right: 11px;
+    line-height: 1;
+    font-size: calc(5.7vh);
+}
+
+.suggestions {
+    margin-top: 5px;
+    list-style-type: none;
+    padding: 5px;
+    padding-left: 27px;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    color: rgb(231, 158, 21);
+    background-color: transparent;
+    background-image: url('./text_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 1);
+}
+
+.help {
+    margin-top: -10px;
+    color: #b0bbbd;
+}
+
+.suggestion {
+    margin-bottom: 0.5px;
+}
+
+.chat-message {
+    display: block !important;
+    padding: 2.6vw;
+    padding-top: 0.6vw;
+    padding-bottom: 0.7vw;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-word;
+    box-sizing: border-box;
+    background-image: url('./text_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.fa-shield-alt {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #1ebc62;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-eye-slash {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #1ebc62;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fa-twitch {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #9c70de;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-flag {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #ff0000;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-twitter {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #2aa9e0;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-cog {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #df7b00;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-ad {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #81db44;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-bullhorn {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #4a6cfd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-ambulance {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #e3a71b;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.fa-door-open {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #ababab;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.fa-cog {
+    color: rgba(42, 42, 42, 0.9);
+    background-color: #df7b00;
+    padding: 5px;
+    border-radius: 5px;
+}
