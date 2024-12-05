@@ -277,6 +277,6 @@ local CHAT_HIDE_STATES = {
   end)
 
 Citizen.CreateThread(function()
-    TriggerEvent('chat:addSuggestion', '/'..Config.ClearChatCommand, 'Clear the chat (just for you)',{})
-    TriggerEvent('chat:addSuggestion', '/'..Config.ClearEveryonesChatCommand, 'Clear the chat (for everyone)',{})
+    TriggerEvent('chat:addSuggestion', '/clear', 'Clear the chat (just for you)',{})
+    TriggerEvent('chat:addSuggestion', '/clearall', 'Clear the chat (for everyone)',{})
 end)
