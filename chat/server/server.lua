@@ -97,9 +97,11 @@ RegisterCommand('ooc', function(source, args, rawCommand)
 end)
 
 RegisterCommand('clear', function(source, args)
-    TriggerClientEvent('chat:clear', source)
+    local src = source
+    TriggerClientEvent('chat:clear', src)
 end)
 
 RegisterCommand('clearall', function(source, args)
+    local src = source
     TriggerClientEvent('chat:clear', source)
 end)
