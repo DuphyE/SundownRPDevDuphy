@@ -98,10 +98,10 @@ end)
 
 RegisterCommand('clear', function(source)
     local src = source
-    TriggerClientEvent('chat:clear', src)
+    TriggerClientEvent('chat:client:ClearChat', src)
 end)
 
 RegisterCommand('clearall', function(source)
     local src = source
-    TriggerClientEvent('chat:clear', -1)
+    TriggerClientEvent('chat:client:ClearChat', -1)
 end)
