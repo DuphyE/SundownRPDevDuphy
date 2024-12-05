@@ -103,5 +103,15 @@ end)
 
 RegisterCommand('clearall', function(source)
     local src = source
-    TriggerClientEvent('chat:client:ClearChat', -1)
+    local user = exports.vorp_core:GetCore().getUser(src)
+    if not user then return end
+    local character = user.getUsedCharacter
+    if character.group == "admin" then 
+        TriggerClientEvent('chat:client:ClearChat', -1)
+    else
+        TriggerClientEvent('chat:addMessage', src, {
+            template = '<div style="padding: 1.1vw; margin: 1.0vw; background-color: rgba(0, 0, 0, 0.7);border-radius:12px;">^0<i class="fa-solid fa-person" size: 5x></i> {0}:<br>{1}</br></div>',
+            args = { GetPlayerName(src), "You are not an admin" }
+        })
+    end
 end)
