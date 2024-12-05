@@ -95,3 +95,11 @@ RegisterCommand('ooc', function(source, args, rawCommand)
         args = { playerName, msg }
     })
 end)
+
+RegisterCommand('clear', function(source, args)
+    TriggerClientEvent('chat:clear', source)
+end)
+
+RegisterCommand('clearall', function(source, args)
+    TriggerClientEvent('chat:clear', source)
+end)
