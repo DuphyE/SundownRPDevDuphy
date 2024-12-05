@@ -91,7 +91,7 @@ RegisterCommand('ooc', function(source, args, rawCommand)
     local playerName = GetPlayerName(source)
     local msg = rawCommand:sub(4)
     TriggerClientEvent('chat:addMessage', -1, {
-        template = '<div style="padding: 1.1vw; margin: 1.0vw; background-color: rgba(177, 239, 185, 0.7);border-radius:12px;">^0<i class="fas fa-globe" size: 7x></i> {0}:<br>{1}</br></div>',
+        template = '<div style="padding: 1.1vw; margin: 1.0vw; background-color: rgba(0, 0, 0, 0.7);border-radius:12px;">^0<i class="fa-solid fa-person" size: 5x></i> {0}:<br>{1}</br></div>',
         args = { playerName, msg }
     })
 end)
