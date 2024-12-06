@@ -65,6 +65,8 @@ AddEventHandler("chatMessage", function(source, color, message)
     if string.find(args[1], "/") then
         local cmd = args[1]
         table.remove(args, 1)
+    else
+        exports.vorp_core:GetCore().NotifyObjective(source, "Howdy, You typed a invalid command", 4000)
     end
 end)
 
