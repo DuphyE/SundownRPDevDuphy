@@ -4,7 +4,7 @@ RegisterCommand(Config.DeletePlayerDataCommand,function(source,args)
         local Character = FXGetPlayerData(src)
         if Character.admin or Character.job == "judge" then
             local target = FXGetPlayerData(tonumber(args[1]))
-            MySQL.query.await('DELETE FROM `fx_idcard` WHERE charid = ?', {target.charIdentifier})
+            MySQL.query.await('DELETE FROM `sdrp_idcard` WHERE charid = ?', {target.charIdentifier})
             TriggerClientEvent('sdrp_idcard:client:updateData',tonumber(args[1]))
             Notify({
                 source = source,

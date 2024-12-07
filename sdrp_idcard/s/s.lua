@@ -207,13 +207,13 @@ RegisterNetEvent('sdrp_idcard:server:buyIdCard', function(data)
     end
 
     if Config.TakeCardType == "sql" then
-        exports.oxmysql:execute("SELECT * FROM fx_idcard WHERE charid = ?", {charid}, function(result)
+        exports.oxmysql:execute("SELECT * FROM sdrp_idcard WHERE charid = ?", {charid}, function(result)
             if not result[1] then
                 local Parameters = {
                     ['charid'] = charid,
                     ['data'] = tostring(json.encode(data)),
                 }
-                exports.oxmysql:execute("INSERT INTO fx_idcard (`charid`, `data`) VALUES (@charid, @data)", Parameters)
+                exports.oxmysql:execute("INSERT INTO sdrp_idcard (`charid`, `data`) VALUES (@charid, @data)", Parameters)
                 TriggerClientEvent('sdrp_idcard:client:setData', src, data)
                 Notify({
                     source = src,
