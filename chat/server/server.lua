@@ -65,7 +65,10 @@ AddEventHandler("chatMessage", function(source, color, message)
     if string.find(args[1], "/") then
         local cmd = args[1]
         table.remove(args, 1)
-        exports.vorp_core:GetCore().NotifyLeft(src, "Chat", "You typed a invalid command", "overhead", "overhead_vip", 2000, "COLOR_PURE_WHITE")
+        TriggerClientEvent('chat:addMessage', -1, {
+            template = '<div style="padding: 1.1vw; margin: 1.0vw; background-color: rgba(0, 0, 0, 0.7);border-radius:12px;">^0<i class="fa-solid fa-person" size: 5x></i> {0}:<br>{1}</br></div>',
+            args = { GetPlayerName(src), "You typed an invalid command" }
+        })
     end
 end)
 
