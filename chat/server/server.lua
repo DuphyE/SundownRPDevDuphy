@@ -105,7 +105,7 @@ RegisterCommand('clear', function(source)
     TriggerClientEvent('chat:client:ClearChat', src)
 end)
 
-RegisterCommand('clearall', function()
+RegisterCommand('clearall', function(source)
     if IsPlayerAceAllowed(source, 'chat.clearall') then
         TriggerClientEvent('chat:client:ClearChat', -1)
 	end
